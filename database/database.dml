@@ -1,0 +1,35 @@
+-- change this to your team id
+use MLP185;
+
+-- The CEO
+INSERT INTO EMPLOYEE_table VALUES(1000);
+
+-- Two Managers
+INSERT INTO EMPLOYEE VALUES(2000);
+INSERT INTO EMPLOYEE VALUES(2001);
+
+-- Two Employees
+INSERT INTO EMPLOYEE VALUES(3000);
+INSERT INTO EMPLOYEE VALUES(3001);
+
+
+insert into ash values (534212, 'asydysd', 7347454);
+select * from ash;
+delete from ash where sid  = 534212;
+rollback;
+SET SQL_SAFE_UPDATES=0;
+
+
+
+UPDATE `MLP185`.`employee` SET `EMP_ID` = '101' WHERE (`EMP_ID` = '101');
+UPDATE `MLP185`.`employee` SET `EMP_ID` = '102' WHERE (`EMP_ID` = '102');
+UPDATE `MLP185`.`employee` SET `EMP_ID` = '103' WHERE (`EMP_ID` = '103');
+UPDATE `MLP185`.`employee` SET `EMP_ID` = '104' WHERE (`EMP_ID` = '104');
+UPDATE `MLP185`.`employee` SET `EMP_ID` = '105' WHERE (`EMP_ID` = '105');
+UPDATE `MLP185`.`employee` SET `EMP_ID` = '106' WHERE (`EMP_ID` = '106');
+UPDATE `MLP185`.`employee` SET `EMP_ID` = '107' WHERE (`EMP_ID` = '107');
+
+
+
+UPDATE `MLP185`.`leave_details` SET `LEAVE_ID` = '1' WHERE (`LEAVE_ID` = '1');
+UPDATE `MLP185`.`leave_details` SET `LEAVE_ID` = '2' WHERE (`LEAVE_ID` = '2');

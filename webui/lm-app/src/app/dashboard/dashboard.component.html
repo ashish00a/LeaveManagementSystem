@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+ <style>
+     .bg {
+        
+        background: #50a3a2;
+        height: 90px;
+        position: fixed;
+        background: linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+        background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%); 
+        font-weight: bold;
+        width: 100%;
+
+     }
+     .bg .btn {
+         border-radius: 10px;
+         position: relative;
+         margin-top: 30%;
+         left: 680px;
+
+     }
+     .lvapp {
+        
+        position: relative;
+         top: 15px;
+         left: 630px;
+     }
+     
+ </style>
+
+
+</head>
+<body>
+    <div class="bg"> 
+        <table>
+        <tr>
+            <td style="font-style: italic; position: relative; top: 15px; left: 450px;">Welcome {{this.employee.fullName}}</td>
+            <td class="lvapp"><app-leave-application></app-leave-application></td>
+            <td ><button class="btn third" (click) = "moveToHomePage()"
+                >Log Out</button></td>
+           
+        </tr>
+    </table>
+    </div>
+    <table><br><br><br><br>
+        <tr>
+            <td><app-employee-details></app-employee-details></td>
+            <td><app-manager-details></app-manager-details></td>
+        </tr>
+    </table>
+    <app-leave-history></app-leave-history><br><hr>
+    
+    
+    <app-pending-leaves></app-pending-leaves><br><hr>
+</body>
+</html>

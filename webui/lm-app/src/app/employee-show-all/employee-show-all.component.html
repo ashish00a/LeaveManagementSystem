@@ -1,0 +1,94 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <style>
+        table {
+            background: #50a3a2;
+  background: linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+  background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
+  width: 100%;
+  height: 100%;
+
+        }
+        table tr {
+  opacity: 1.0;
+}
+
+table tr:hover {
+    color: rgb(139, 3, 9);
+ 
+}
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container"><br><br><br>
+            <form>
+                <div class="form-group" align="left">
+                    <div class="input-group" style="width: 30%;">
+                        
+                        <input type="text" class="form-control" id=icon name="searchString"  placeholder="Type to search employee..." [(ngModel)]="searchString">
+                    </div>
+                      <br/>
+                </div>
+            </form>
+            <h1 align = "center">ALL EMPLOYEES</h1>
+            <table  align = "center" class="table" style="width: 80%; border-radius: 20px;">
+               <tr>
+                    <th>Employ No</th>
+                    <th>Full Name</th>
+                    <th>Email Id</th>
+                    <th>Mobile Number</th>
+                    <th>Date of Joining</th>
+                    <th>Department</th>
+                    <th>Leave Balance</th>
+                    <th>Manager Id</th> 
+                    <th>Login</th>
+                </tr>
+                <tr *ngFor="let e of emps | async | filterdata : {empId : searchString, fullName : searchString, emailId : searchString,
+                    mobNo : searchString, doj : searchString, empDpt : searchString, leaveBal : searchString, leaveBal : searchString, mgrId : searchString}">
+                    <td>{{e.empId}}</td>
+                    <td>{{e.fullName}}</td>
+                    <td>{{e.emailId}}</td>
+                    <td>{{e.mobNo}}</td>
+                    <td>{{e.doj}}</td>
+                    <td>{{e.empDpt}}</td>
+                    <td>{{e.leaveBal}}</td>
+                    <td>{{e.mgrId}}</td>
+                    <td><button class="btn" style="background-color: bisque;" (click)="show(e.empId, e.mgrId, e.fullName)">Login</button></td>
+                </tr>
+            </table>
+        </div>
+        
+        <ul class="bg-bubbles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>
+
+
+

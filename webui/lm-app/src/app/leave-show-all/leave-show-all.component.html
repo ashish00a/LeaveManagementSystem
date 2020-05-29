@@ -1,0 +1,26 @@
+<p>employee-show-all works!</p>
+<table border="3">
+    <tr>
+        <th>leaveId</th>
+        <th>empId</th>
+        <th>noOfDays</th>
+        <th>startDate</th>
+        <th>endDate</th>
+        <th>leaveType</th>
+        <th>leaveStatus</th>
+        <th>leaveReason</th>
+        <th>appliedOn</th>
+    </tr>
+    
+    <tr *ngFor="let e of leavs  | async">
+        <td>{{e.leaveId}}</td>
+        <td>{{e.empId}}</td>
+        <td>{{e.noOfDays}}</td>
+        <td>{{e.startDate}}</td>
+        <td>{{e.endDate}}</td>
+        <td>{{e.leaveType}}</td>
+        <td>{{e.leaveReason}}</td>
+        <td>{{e.appliedOn}}</td>
+      
+    </tr>
+</table>
