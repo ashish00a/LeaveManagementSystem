@@ -99,7 +99,7 @@
               <coverage-output>html</coverage-output>
               <coverage-metrics>all</coverage-metrics>
               <coverage-classes>com.hexaware.MLP185.model.*</coverage-classes>
-              <coverage-check>85</coverage-check>
+              <coverage-check>69</coverage-check>
             </systemPropertyVariables>
           </configuration>
         </plugin>
